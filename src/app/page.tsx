@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import cookie from 'js-cookie';
 import Home from './home/page';
 import About from './about/page';
-import Video from './video/page';
+//import Video from './video/page';
 import Button from './button/page';
 import Message from './message/page';
 import Contact from './contact/page';
@@ -54,7 +54,6 @@ function Page() {
       <Home />
       <About />
       <Button/>
-      <Video />
       <Chatbot/>
       <Message />
       <Contact />

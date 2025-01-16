@@ -1,3 +1,4 @@
+{/**
 "use client"
 import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
@@ -47,7 +48,7 @@ function Video() {
         </ul>
       </div>
 
-      {/* Video Display Section */}
+    
       <div className="video-display w-2/3 p-4 max-md:w-full">
         <iframe
           width="100%"
@@ -65,3 +66,4 @@ function Video() {
 }
 
 export default Video;
+ */}
