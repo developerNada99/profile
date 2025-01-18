@@ -1,10 +1,11 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
 function Video() {
   const { t } = useTranslation();
   const [selectedVideo, setSelectedVideo] = useState('HV0JS4WiM4k');
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const videos = [
     { title: t('tag1-video'), id: 'HV0JS4WiM4k' },
@@ -23,8 +24,17 @@ function Video() {
   ];
 
   const handleVideoClick = (id: string) => {
-  setSelectedVideo(id);
-};
+    setSelectedVideo(id);
+    setIsVideoLoaded(true); // عندما يتم النقر على الفيديو، نحمل الفيديو المختار
+  };
+
+  useEffect(() => {
+    // هذه الدالة ستنفذ بمجرد تحميل الفيديو المختار
+    if (isVideoLoaded) {
+      document.getElementById("video-frame")?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [isVideoLoaded]);
+
   return (
     <div className="video-gallery bg-[#333333] pb-5" id='video'>
       <h3 className="text-white text-5xl font-normal flex justify-center items-center p-5" style={{ wordSpacing: "-10px" }}>
@@ -40,6 +50,7 @@ function Video() {
                     src={`https://img.youtube.com/vi/${video.id}/0.jpg`}
                     alt={video.title}
                     className="w-1/2 h-24 object-cover"
+                    loading="lazy" // تحسين التحميل عبر lazy loading
                   />
                   <p className='w-1/2 text-gray-400'>{video.title}</p>
                 </div>
@@ -49,16 +60,18 @@ function Video() {
         </div>
 
         {/* Video Display Section */}
-        <div className="video-display w-2/3 p-4 max-md:w-full">
-          <iframe
-            width="100%"
-            height="500"
-            src={`https://www.youtube.com/embed/${selectedVideo}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Selected Video"
-          ></iframe>
+        <div className="video-display w-2/3 p-4 max-md:w-full" id="video-frame">
+          {isVideoLoaded && (
+            <iframe
+              width="100%"
+              height="500"
+              src={`https://www.youtube.com/embed/${selectedVideo}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Selected Video"
+            ></iframe>
+          )}
         </div>
       </div>
     </div>
