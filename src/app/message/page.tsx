@@ -8,7 +8,7 @@ const Message = () => {
 
   return (
     <>
-    <div className='flex justify-center items-center bg-[#222222] max-lg:flex-col'>
+    <div className='flex justify-center items-center bg-[#222222] max-lg:flex-col h-screen'>
     <div className='w-1/2 max-md:w-full max-lg:w-full relative'>
        <Image src='/message.jpg' alt='' className="w-full h-full" height={900} width={900} />
        <div className='absolute inset-0 bg-black bg-opacity-40'></div>
