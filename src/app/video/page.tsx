@@ -1,39 +1,35 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
 function Video() {
   const { t } = useTranslation();
-  const [selectedVideo, setSelectedVideo] = useState('HV0JS4WiM4k');
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>('HV0JS4WiM4k');
+  const [videos, setVideos] = useState<{ title: string, id: string }[]>([]);
 
-  const videos = [
-    { title: t('tag1-video'), id: 'HV0JS4WiM4k' },
-    { title: t('tag2-video'), id: 'VFYoStUWML0' },
-    { title: t('tag3-video'), id: 'vB3oAdgKW70' },
-    { title: t('tag4-video'), id: 'Mo1l9bEql7Q' },
-    { title: t('tag5-video'), id: 'TCwgfOrFYKU' },
-    { title: t("tag6-video"), id: 't34SRDYtTiQ' },
-    { title: t("tag7-video"), id: 'rvonT2Ws21M' },
-    { title: t("tag8-video"), id: 'DmVzHkngdMs' },
-    { title: t("tag9-video"), id: 'PTcRAovVpKE' },
-    { title: t("tag10-video"), id: '7pS2-EsE1Vw' },
-    { title: t("tag11-video"), id: 'OAyVg-mua1s' },
-    { title: t("tag12-video"), id: 'jogRfmcAudM' },
-    { title: t("tag13-video"), id: 'OiYFabeN-ls' },
-  ];
+  // تحميل الفيديوهات بعد تحميل المكون
+  useEffect(() => {
+    const videoList = [
+      { title: t('tag1-video'), id: 'HV0JS4WiM4k' },
+      { title: t('tag2-video'), id: 'VFYoStUWML0' },
+      { title: t('tag3-video'), id: 'vB3oAdgKW70' },
+      { title: t('tag4-video'), id: 'Mo1l9bEql7Q' },
+      { title: t('tag5-video'), id: 'TCwgfOrFYKU' },
+      { title: t("tag6-video"), id: 't34SRDYtTiQ' },
+      { title: t("tag7-video"), id: 'rvonT2Ws21M' },
+      { title: t("tag8-video"), id: 'DmVzHkngdMs' },
+      { title: t("tag9-video"), id: 'PTcRAovVpKE' },
+      { title: t("tag10-video"), id: '7pS2-EsE1Vw' },
+      { title: t("tag11-video"), id: 'OAyVg-mua1s' },
+      { title: t("tag12-video"), id: 'jogRfmcAudM' },
+      { title: t("tag13-video"), id: 'OiYFabeN-ls' },
+    ];
+    setVideos(videoList);
+  }, [t]);
 
   const handleVideoClick = (id: string) => {
     setSelectedVideo(id);
-    setIsVideoLoaded(true); // عندما يتم النقر على الفيديو، نحمل الفيديو المختار
   };
-
-  useEffect(() => {
-    // هذه الدالة ستنفذ بمجرد تحميل الفيديو المختار
-    if (isVideoLoaded) {
-      document.getElementById("video-frame")?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [isVideoLoaded]);
 
   return (
     <div className="video-gallery bg-[#333333] pb-5" id='video'>
@@ -50,7 +46,6 @@ function Video() {
                     src={`https://img.youtube.com/vi/${video.id}/0.jpg`}
                     alt={video.title}
                     className="w-1/2 h-24 object-cover"
-                    loading="lazy" // تحسين التحميل عبر lazy loading
                   />
                   <p className='w-1/2 text-gray-400'>{video.title}</p>
                 </div>
@@ -60,8 +55,8 @@ function Video() {
         </div>
 
         {/* Video Display Section */}
-        <div className="video-display w-2/3 p-4 max-md:w-full" id="video-frame">
-          {isVideoLoaded && (
+        <div className="video-display w-2/3 p-4 max-md:w-full">
+          {selectedVideo && (
             <iframe
               width="100%"
               height="500"
