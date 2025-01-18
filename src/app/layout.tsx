@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// استيراد المكون المعدل
-import Nav from './navbar/layout'
-import Contact from './contact/layout'
+
+import Nav from './navbar/layout';
+import Contact from './contact/layout';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
