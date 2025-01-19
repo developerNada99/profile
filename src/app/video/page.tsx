@@ -15,30 +15,7 @@ function Video() {
       </h3>
       
       {/* Container for the large video centered */}
-      <div className="flex justify-center items-center">
-        <div className="w-[500px] h-[500px] m-2">
-          <ReactPlayer 
-            url={`/videos/video4.mp4`} 
-            controls 
-            width="100%" 
-            height="100%" 
-          />
-        </div>
-      </div>
-
-      {/* Smaller videos grid */}
-      <div className="flex flex-wrap justify-center">
-        {[...Array(16)].map((_, index) => (
-          <div key={index} className="w-56 h-56 m-2">
-            <ReactPlayer 
-              url={`/videos/video${index + 1}.mp4`} 
-              controls 
-              width="100%" 
-              height="100%" 
-            />
-          </div>
-        ))}
-      </div>
+      
     </div>
   );
 }
