@@ -9,7 +9,7 @@ import dynamic from 'next/dynamic';
 import Home from './home/page';
 import About from "./about/page";
 import Button from "./button/page";
-import Video from "./video/page";
+import Resume from "./resume/page";
 import Chatbot from "./ai/page";
 import Message from "./message/page";
 
@@ -48,11 +48,11 @@ function Page() {
 
   return (
     <>
-      <Home />
+      <Home/>
       <About />
-      <Button />
-      <Video />
-      <Chatbot />
+      <Chatbot/>
+      <Resume/>
+      <Button/>
       <Message/>
     </>
   );

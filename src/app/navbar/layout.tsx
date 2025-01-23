@@ -68,7 +68,7 @@ const Nav = () => {
             <ul className={`hidden max-md:flex max-md:items-center max-md:flex-grow max-md:justify-center max-md:gap-5 max-md:flex-col max-md:bg-[#333333] max-md:opacity-85 max-md:pt-8 max-md:h-screen`}>
               <Link href="/"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Home")}</li></Link>
               <Link href="/about"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("About")}</li></Link>
-              <Link href="/video"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Videos")}</li></Link>
+              <Link href="/resume"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Resume")}</li></Link>
               <Link href="/message"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Contact")}</li></Link>
               <li>
                 <button 
@@ -84,7 +84,7 @@ const Nav = () => {
         <ul className={`flex items-center flex-grow justify-center gap-5 max-md:hidden`}>
           <Link href="/"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Home")}</li></Link>
           <Link href="/about"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("About")}</li></Link>
-          <Link href="/video"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Videos")}</li></Link>
+          <Link href="/resume"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Resume")}</li></Link>
           <Link href="/message"><li className="text-white uppercase text-lg hover:text-yellow-600 transition duration-300">{t("Contact")}</li></Link>
         </ul>
 
