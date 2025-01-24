@@ -12,6 +12,7 @@ import Button from "./button/page";
 import Resume from "./resume/page"
 import Chatbot from "./ai/page";
 import Message from "./message/page";
+import VideoGallery from './vid/page'
 
 // Initialize i18next
 i18n
@@ -53,7 +54,8 @@ function Page() {
       <Chatbot/>
       <Resume/>
       <Button/>
-      <Message/>
+      <Message />
+      <VideoGallery/>
     </>
   );
 }
