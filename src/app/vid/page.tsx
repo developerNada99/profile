@@ -1,8 +1,10 @@
 "use client"
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
 function VideoGallery() {
   const [selectedVideo, setSelectedVideo] = useState('HV0JS4WiM4k');
+  const { t } = useTranslation();
 
   const videos = [
     { title: 'Tag 1 Video', id: 'HV0JS4WiM4k' },
@@ -27,7 +29,7 @@ function VideoGallery() {
   return (
     <div className="video-gallery bg-gray-900 pb-5" id='video'>
       <h3 className="text-white text-5xl font-normal flex justify-center items-center p-5" style={{ wordSpacing: "-10px" }}>
-        <span className="text-yellow-600 font-bold">Video</span> Gallery
+        <span className="text-yellow-600 font-bold">{t("tag1-video")}</span> Gallery
       </h3>
       <div className='flex justify-start items-center max-md:flex-col'>
         <div className="video-list w-1/3 overflow-auto p-4 h-[500px] max-md:w-full" style={{ scrollbarColor: "#686868 #424242", scrollbarWidth: "thin" }}>
