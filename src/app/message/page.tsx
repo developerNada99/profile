@@ -13,7 +13,7 @@ const Message = () => {
   }, []);
 
   if (!isHydrated) {
-    return null; // Prevent rendering until hydrated
+    return null;
   }
 
   return (
