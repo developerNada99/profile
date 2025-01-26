@@ -21,6 +21,7 @@ i18n
   .use(HttpApi)
   .init({
     fallbackLng: "en",
+    interpolation: { escapeValue: false },
     detection: {
       order: [
         'cookie',
