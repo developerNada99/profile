@@ -16,21 +16,8 @@ function VideoGallery() {
       >
         <span className="text-yellow-600 font-bold">{t("tag1-video")}</span> {t("gallery")}
       </h3>
-      <div className="flex justify-start items-center max-md:flex-col">
-        <div
-          className="video-list w-1/3 overflow-auto p-4 h-[500px] max-md:w-full"
-          style={{ scrollbarColor: "#686868 #424242", scrollbarWidth: "thin" }}
-        >
-          
-        </div>
-
-        <div className="video-display w-2/3 p-4 max-md:w-full">
-          <video className="rounded-xl shadow-lg" controls width="80%">
-            <source src="/videos/video1.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-        </div>
-      </div>
+     
+       
     </div>
   );
 }
