@@ -20,7 +20,7 @@ const Message = () => {
     <div className='flex justify-center items-center bg-[#222222] max-lg:flex-col h-full'>
       <div className='w-1/2 max-md:w-full max-lg:w-full relative'>
         <Image src='/message.jpg' alt='' className="w-full h-full" height={900} width={900} />
-        <div className='absolute inset-0 bg-black bg-opacity-40'></div>
+        <div className='absolute inset-0 bg-black/65 bg-opacity-40'></div>
       </div>
       <div className='w-1/2 flex flex-col justify-center items-center gap-5 max-md:w-full max-md:mt-5 max-lg:w-full'>
         <h2 className='font-bold text-4xl text-white'>{t("Get in Touch")}</h2>
