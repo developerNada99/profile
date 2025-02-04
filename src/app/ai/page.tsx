@@ -53,7 +53,7 @@ export default function Chatbot() {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen" style={{ backgroundColor: '#222222' }}>
+    <div className="flex justify-center items-center h-full" style={{ backgroundColor: '#222222' }}>
       <div className="bg-[#333333] shadow-lg rounded-lg p-6 max-w-sm w-full">
         <button
           onClick={() => setIsChatVisible(!isChatVisible)}

@@ -16,7 +16,7 @@ const Button = () => {
   }
 
   return (
-    <div className='relative h-fit'>
+    <div className='relative h-fit text-center'>
       <img src='button.jpg' alt='' className='w-full h-60' />
       <div className='absolute inset-0 bg-black/85 bg-opacity-60 z-10'></div>
       <div className='absolute inset-0 flex flex-col justify-center items-center z-20 max-md:text-center'>

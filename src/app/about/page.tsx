@@ -6,7 +6,7 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="about bg-[#222222] py-8 flex justify-center items-center gap-5 flex-wrap" id="about">
+    <div className="about bg-[#222222] py-8 flex justify-center items-center gap-5 flex-wrap h-screen" id="about">
       <div className='image w-2/5 h-auto'>
         {/* Ensure that the image path is correct and available */}
         <Image src='/khlifa.jpg' alt={t("Profile Image")} className="w-full h-full" height={900} width={900} />
