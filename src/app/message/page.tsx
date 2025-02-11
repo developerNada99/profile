@@ -22,7 +22,7 @@ const Message = () => {
         <Image src='/message.jpg' alt='' className="w-full h-full" height={900} width={900} />
         <div className='absolute inset-0 bg-black/65 bg-opacity-40'></div>
       </div>
-      <div className='w-1/2 flex flex-col justify-center py-12 items-center gap-5 max-md:w-full max-md:mt-5 max-lg:w-full'>
+      <div className='w-1/2 flex flex-col justify-center my-24 items-center gap-5 max-md:w-full max-md:mt-5 max-lg:w-full'>
         <h2 className='font-bold text-4xl text-white'>{t("Get in Touch")}</h2>
         <input className='w-2/4 h-10 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl' type='text' placeholder={t('input-name')} name='name'/>
         <input className='w-2/4 h-10 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl' type='email' name='email' placeholder={t('input-email')}/>

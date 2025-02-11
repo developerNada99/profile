@@ -65,3 +65,15 @@
   }
 }
 
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+video {
+  user-select: none;
+  pointer-events: auto;
+}
