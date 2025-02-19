@@ -2,8 +2,21 @@
 import Image from "next/image";
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { useState, useEffect } from "react";
 
 const Contact = () => {
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowFooter(true);
+    }, 3000); // تأخير 3 ثوانٍ
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!showFooter) return null; // لا تعرض الفوتر قبل انتهاء المؤقت
+
   return (
     <div className='p-7 bg-[#222222] flex justify-center items-center gap-6' id='contact'>
       <Link href="https://www.instagram.com/eng.khalifaalsaadi?igsh=YmVvM2R4aGE0d3p4" passHref>
@@ -28,7 +41,7 @@ const Contact = () => {
         <Image src="/snap.png" className='rounded-full' height={55} width={55} alt='' />
       </Link>
     </div>
-  )
-}
+  );
+};
 
 export default dynamic(() => Promise.resolve(Contact), { ssr: false });
