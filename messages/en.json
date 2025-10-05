@@ -1,0 +1,46 @@
+{
+  "Navbar": {
+    "Home": "Home",
+    "About": "About",
+    "Resume": "Resume",
+    "Contact": "Contact"
+  },
+  "Home": {
+    "Khalifa_en": "Khalifa Alsaadi.",
+    "Khalifa_ar": ".خليفه السعدى"
+  },
+  "About": {
+    "About-tag": "About",
+    "Me-tag": "Me",
+    "about string": "Offering more than a decade of experience in supervising the work of all site operatives while ensuring and maintaining compliance with safety, quality, and budgetary constraints. My competence has been in equipment installation, checkup, service, and maintenance aimed at ensuring the proper functioning of equipment and operational efficiency."
+  },
+  "Education": {
+    "resume-tag1": "My",
+    "resume-tag2": "Resume",
+    "edu": "Education",
+    "degree1_date": "Jun 2020 - Jan 2024",
+    "degree1_title": "Bachelor of Engineering - BE, Mechanical Engineering from Liwa College",
+    "degree1_desc": "Liwa College has been a cornerstone of higher education in the emirate of Abu Dhabi, nurturing potential and supplying the UAE labour market with skilled professionals.",
+    "degree2_date": "Sep 2007 - Sep 2010",
+    "degree2_title": "Diploma, Mechanical Maintenance from Higher Colleges of Technology",
+    "degree2_desc": "The Higher Colleges of Technology (HCT) is the UAE’s largest applied higher educational institution, with over 25,000 students attending 16 modern, technology-oriented campuses.",
+    "exper": "Experience",
+    "exper1_title": "Operation Foreman",
+    "exper1_company": "Abu Dhabi Company for Onshore Oil Operations",
+    "exper1_desc": "10+ years of consistent experience with Abu Dhabi Company for Onshore Oil Operations as an Operation Foreman. I was appointed to manage W.I installations and equipment as part of the enhanced oil recovery system.",
+    "exper2_title": "Educational Consultant",
+    "exper2_company": "Training Center",
+    "exper2_desc": "During this employment as an Educational Consultant, I was accountable for examining training material and advising improvement. With strong strategic planning skills, I formulated strategic plans and designed lecture hall layouts."
+  },
+  "Message":{
+    "Learn More About the World of Petroleum Engineering":"Learn More About the World of Petroleum Engineering",
+    "Set Out":"Set Out"
+  },
+  "Contact":{
+    "Get in Touch":"Get in Touch",
+    "input-name":"Name",
+    "input-email":"Email",
+    "input-message":"Message",
+    "input-button":"Send"
+  }
+}

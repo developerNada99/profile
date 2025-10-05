@@ -4,8 +4,8 @@ import "swiper/css";
 import { useState, useEffect } from "react";
 
 export default function VideoBackground() {
-  const [playing, setPlaying] = useState(Array(16).fill(false));
-  const [slidesPerView, setSlidesPerView] = useState(3); 
+  const [playing, setPlaying] = useState<boolean[]>(Array(16).fill(false));
+  const [slidesPerView, setSlidesPerView] = useState<number>(3);
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,13 +16,13 @@ export default function VideoBackground() {
       }
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleVideoClick = (index) => {
+  const handleVideoClick = (index: number) => {
     setPlaying((prev) => {
       const updated = Array(16).fill(false);
       updated[index] = !prev[index];
@@ -32,7 +32,6 @@ export default function VideoBackground() {
 
   return (
     <div className="relative w-full">
-    
       <video
         className="w-full h-[600px] object-cover"
         src="/videos/video4.mp4"
@@ -42,7 +41,6 @@ export default function VideoBackground() {
         playsInline
       />
       <div className="absolute inset-0 bg-black/60 z-10"></div>
-
 
       <div className="absolute inset-0 z-20 flex items-center justify-center">
         <div className="w-3/4">
