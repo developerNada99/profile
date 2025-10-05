@@ -63,7 +63,7 @@ const Message = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="w-2/4 h-10 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl"
+          className="w-full h-10 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl"
           type="text"
           placeholder={t('input-name')}
           name="name"
@@ -74,7 +74,7 @@ const Message = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="w-2/4 h-10 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl"
+          className="w-full h-10 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl"
           type="email"
           name="email"
           placeholder={t('input-email')}
@@ -85,7 +85,7 @@ const Message = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="w-2/4 h-24 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl"
+          className="w-full h-24 mb-4 p-4 outline-none bg-[#e6e6e6] rounded-2xl"
           placeholder={t('input-message')}
         ></motion.textarea>
         
