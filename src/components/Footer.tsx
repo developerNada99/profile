@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="p-7 bg-[#222222] flex justify-center items-center gap-6"
+      className="p-7 bg-[#222222] flex justify-center items-center gap-6 px-10"
     >
       <Link
         href="https://www.instagram.com/eng.khalifaalsaadi?igsh=YmVvM2R4aGE0d3p4"

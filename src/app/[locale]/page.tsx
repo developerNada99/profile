@@ -6,7 +6,6 @@ import About from "./about/page";
 import Button from "./button/page";
 import Resume from "./resume/page"
 import Message from "./message/page";
-import Video from "../video/page";
 
 
 

@@ -8,7 +8,7 @@ const About = () => {
 
   return (
     <div
-      className="about bg-[#222222] pb-24 flex justify-center items-center gap-5 flex-wrap h-full"
+      className="about bg-[#222222] pb-24 pt-24 flex justify-center items-center gap-5 flex-wrap h-full"
       id="about"
     >
       {/* صورة ودواير */}

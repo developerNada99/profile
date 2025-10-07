@@ -15,7 +15,7 @@ function Resume() {
     offset: ["start end", "end start"]
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["-30%", "30%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-80%", "80%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   return (
